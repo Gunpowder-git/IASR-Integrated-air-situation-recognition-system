@@ -191,4 +191,4 @@ python -m streamlit run app.py
 - OpenCV / FFmpeg
 - iS3 Lab
 
-Author : He Jiale @ Tongji University
+Author : He Jiale @Tongji University
