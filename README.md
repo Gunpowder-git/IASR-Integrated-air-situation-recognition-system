@@ -87,19 +87,12 @@ python -m pip install -r requirements.txt
 ### 2）模型权重（重要）
 本项目默认使用 Ultralytics YOLO 权重（例如 `yolov8n.pt`）。
 
-#### 方案A（推荐，离线更稳）：本地放置权重
+#### 推荐方案：本地放置权重
 将 `yolov8n.pt` 放到项目根目录（与 `app.py` 同级）：
 
 ```
 IASR_system/yolov8n.pt
 ```
-
-> ✅ 建议不要把 `.pt` 权重文件提交到 GitHub（体积大且可能涉及分发问题）。
-
-#### 方案B：允许自动下载（需要网络）
-若校园网/代理导致 SSL 或 GitHub 下载失败，建议使用方案A。
-
----
 
 ### 3）启动仪表盘
 
