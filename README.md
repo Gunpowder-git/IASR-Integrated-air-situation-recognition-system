@@ -173,7 +173,7 @@ python -m streamlit run app.py
 
 ---
 
-## 十、许可证
+## 许可证
 - 本项目采用 MIT 许可证。 This project is licensed under the MIT.
 
 ---
