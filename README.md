@@ -143,8 +143,6 @@ IASR-Integrated-air-situation-recognition-system/
 
 如果没有本地权重，也可以在页面侧边栏勾选“允许自动下载模型”，但网络不稳定时不推荐。
 
-> 建议不要把 `.pt` 权重文件提交到 GitHub。
-
 ### 5. 启动系统
 
 ```bash
