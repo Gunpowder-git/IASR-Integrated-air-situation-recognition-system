@@ -8,9 +8,9 @@ IASR System是一个可扩展的低空态势识别与预警集成系统。系统
 
 ---
 
-## 1 功能概览
+## 一、功能概览
 
-### 1.1感知与指标
+### 1.1 感知与指标
 - 基于 YOLO 的视频目标检测与跟踪
 - 交通态势指标：
   - **流量 Flow（veh/min）**：通过“过线计数”统计
@@ -18,11 +18,11 @@ IASR System是一个可扩展的低空态势识别与预警集成系统。系统
   - **相对速度 Speed（px/s）**：基于跟踪轨迹的像素位移
   - **拥堵指数 Congestion Index（0–100）**：综合流量↑、占有率↑、速度↓得到可量化信号
 
-### 天气/能见度态势（MVP 代理指标）
+### 1.2 天气/能见度态势（MVP 代理指标）
 - 基于视频清晰度/对比度计算 **visibility_score**
 - 自动生成简要“天气态势报告”（良好/一般/较差）
 
-### 统一事件系统 + 预警路由
+### 1.3 统一事件系统 + 预警路由
 系统把识别结果转成统一事件模型（Event Schema），并按事件类型分发给对应对象：
 - `bird_flock` → 运行/飞行管控
 - `intrusion` → 安防/监管（提示需人工复核）
@@ -35,14 +35,14 @@ IASR System是一个可扩展的低空态势识别与预警集成系统。系统
 - **证据关键帧截图**
 - 导出 JSON
 
-### Web 仪表盘（Streamlit）
+### 1.4 Web 仪表盘（Streamlit）
 - 多 Tab：交通态势 / 预警中心 / 天气态势 / 扩展接口
 - 标注后视频展示（输出 H.264，浏览器兼容）
 - 导出：`metrics.csv`、`events.json`
 
 ---
 
-## 项目结构
+## 二、项目结构
 
 ```
 IASR_system/
@@ -55,16 +55,16 @@ IASR_system/
 
 ---
 
-## 环境要求
+## 三、环境要求
 - 推荐 Python 3.9+
 - Windows / macOS / Linux 均可运行
 - GPU 可选（CPU 也能跑，但速度较慢）
 
 ---
 
-## 安装与运行
+## 四、安装与运行
 
-### 1）创建并激活虚拟环境（推荐）
+### 4.1 创建并激活虚拟环境（推荐）
 
 **Windows PowerShell**
 ```powershell
@@ -84,7 +84,7 @@ python -m pip install -r requirements.txt
 
 ---
 
-### 2）模型权重
+### 4.2 添加模型权重
 本项目默认使用 Ultralytics YOLO 权重（例如 `yolov8n.pt`）。
 
 #### 推荐方案：本地放置权重
@@ -94,7 +94,7 @@ python -m pip install -r requirements.txt
 IASR_system/yolov8n.pt
 ```
 
-### 3）启动仪表盘
+### 4.3 启动仪表盘
 
 ```powershell
 python -m streamlit run app.py
@@ -104,7 +104,7 @@ python -m streamlit run app.py
 
 ---
 
-## 使用说明（快速上手）
+## 五、使用说明
 1. 上传本地视频（mp4/mov/mkv）
 2. 在侧边栏调整参数：
    - `conf`：检测置信度
@@ -122,7 +122,7 @@ python -m streamlit run app.py
 
 ---
 
-## 输出文件说明
+## 六、输出文件说明
 每次运行会在 `outputs/run/` 下生成：
 
 - `annotated_raw.mp4`：OpenCV 直接写出（浏览器可能不兼容）
@@ -133,7 +133,7 @@ python -m streamlit run app.py
 
 ---
 
-## 事件定义
+## 七、事件定义
 
 ### `bird_flock`（鸟群风险）
 当鸟类数量超过阈值并持续一段时间触发。
@@ -150,7 +150,7 @@ python -m streamlit run app.py
 
 ---
 
-## 常见问题
+## 八、常见问题
 
 ### 1）标注后视频在网页端显示 0:00 / 黑屏
 请使用 `annotated_h264.mp4`（本项目默认会生成并展示 H.264 输出）。
@@ -165,7 +165,7 @@ python -m streamlit run app.py
 
 ---
 
-## 可扩展方向
+## 九、可扩展方向
 - 多路摄像头融合与区域热力图
 - 更多事件插件：人群聚集、逆行、烟羽追踪、起降点态势评估等
 - 对接学校平台 API：工单派发/消息推送/联动处置
@@ -173,7 +173,7 @@ python -m streamlit run app.py
 
 ---
 
-## 许可证
+## 十、许可证
 - 本项目采用 MIT 许可证。 This project is licensed under the MIT.
 
 ---
