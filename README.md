@@ -348,5 +348,5 @@ This project is licensed under the MIT License.
 ## Author
 
 **He Jiale**  
-Tongji University  
+Guohao College of Tongji University  
 GitHub: [@Gunpowder-git](https://github.com/Gunpowder-git)
