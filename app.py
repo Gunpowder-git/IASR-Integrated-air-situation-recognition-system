@@ -271,7 +271,7 @@ with tab1:
         }).set_index("时间(s)")
         st.line_chart(chart_df)
 
-        st.write("**中文化指标表（最近20行）**")
+        st.write("**指标表（最近20行）**")
         df_zh = metrics_to_zh_dataframe(df)
         st.dataframe(df_zh.tail(20), use_container_width=True)
         show_download(paths["metrics_zh_csv"], "下载中文指标表 metrics_zh.csv", "metrics_zh.csv", "text/csv")
