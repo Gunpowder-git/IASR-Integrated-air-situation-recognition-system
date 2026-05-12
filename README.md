@@ -50,7 +50,7 @@ IASR_system/
   perception_core.py   # 检测/跟踪 + 指标 + 事件触发 + 视频输出
   event_engine.py      # 统一事件模型 + 冷却/防抖工具
   requirements.txt
-  outputs/             # 运行输出（建议加入 .gitignore）
+  outputs/             # 运行输出
 ```
 
 ---
