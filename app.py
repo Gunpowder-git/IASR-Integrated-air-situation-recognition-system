@@ -17,7 +17,7 @@ from perception_core import metrics_to_zh_dataframe, process_video
 
 st.set_page_config(page_title="IASR空中态势识别集成系统", layout="wide")
 st.title("IASR 空中态势识别集成系统")
-st.caption("视频态势识别 · 事件预警路由 · 农业扩展接口 · 中文化结果导出")
+st.caption("态势识别 · 预警路由 · 接口扩展 · 结果导出")
 
 OUTPUT_ROOT = Path("outputs") / "runs"
 OUTPUT_ROOT.mkdir(parents=True, exist_ok=True)
@@ -146,11 +146,11 @@ with st.sidebar:
     with st.expander("运行模式", expanded=True):
         model_name = st.text_input("模型文件名/路径", value="yolov8n.pt")
         allow_download = st.checkbox("允许自动下载模型（网络不稳定时不建议）", value=False)
-        conf = st.slider("检测置信度", 0.10, 0.80, float(preset["conf"]), 0.05)
+        conf = st.slider("检测置信度（高置信度可能导致处理时间加长）", 0.10, 0.80, float(preset["conf"]), 0.05)
         max_frames = st.number_input("最多处理帧数（0=全视频）", min_value=0, max_value=20000, value=600, step=50)
         frame_skip = st.slider("跳帧处理（1=不跳帧，2=每2帧取1帧）", 1, 10, 2, 1)
         resize_width = st.number_input("最大处理宽度(px，0=不缩放)", min_value=0, max_value=3840, value=960, step=80)
-        source_id = st.text_input("视频来源ID", value="camera_or_video_01")
+        source_id = st.text_input("视频ID（会记录在表单中）", value="camera_or_video_01")
 
     with st.expander("区域与空间配置", expanded=False):
         st.caption("坐标基于处理后画面。如果设置了最大处理宽度，坐标也按缩放后画面填写。留空则使用系统默认。")
