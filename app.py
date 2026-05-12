@@ -146,7 +146,7 @@ with st.sidebar:
     with st.expander("运行模式", expanded=True):
         model_name = st.text_input("模型文件名/路径", value="yolov8n.pt")
         allow_download = st.checkbox("允许自动下载模型（网络不稳定时不建议）", value=False)
-        conf = st.slider("检测置信度（高置信度可能导致处理时间加长）", 0.10, 0.80, float(preset["conf"]), 0.05)
+        conf = st.slider("检测置信度", 0.10, 0.80, float(preset["conf"]), 0.05)
         max_frames = st.number_input("最多处理帧数（0=全视频）", min_value=0, max_value=20000, value=600, step=50)
         frame_skip = st.slider("跳帧处理（1=不跳帧，2=每2帧取1帧）", 1, 10, 2, 1)
         resize_width = st.number_input("最大处理宽度(px，0=不缩放)", min_value=0, max_value=3840, value=960, step=80)
