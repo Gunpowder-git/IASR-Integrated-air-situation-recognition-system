@@ -157,8 +157,6 @@ python -m streamlit run app.py
 http://localhost:8501
 ```
 
----
-
 ## 🧭 How to Use
 
 ### 视频分析流程
@@ -195,8 +193,6 @@ http://localhost:8501
 4. 点击 **开始农业扩展分析**
 5. 查看标注图片、疑似病害分数、事件表与派单日志
 
----
-
 ## ⚙️ 参数说明
 
 ### 运行模式
@@ -224,8 +220,6 @@ http://localhost:8501
 | 低能见度阈值 | 阈值越高，越容易触发低能见度事件 |
 | 异常停车速度阈值 | 速度低于阈值并持续一定时间后触发异常停车 |
 | 同类事件冷却时间 | 防止同类事件短时间内重复刷屏 |
-
----
 
 ## 📁 输出目录
 
@@ -258,8 +252,6 @@ outputs/
       agriculture_evidence/
 ```
 
----
-
 ## 🧩 Project Structure
 
 ```text
@@ -272,8 +264,6 @@ IASR-Integrated-air-situation-recognition-system/
   models/                # 可选：模型权重目录
   outputs/               # 运行输出目录，建议加入 .gitignore
 ```
-
----
 
 ## 🧠 System Design
 
@@ -294,8 +284,6 @@ IASR 的核心流程可以概括为：
 ```
 
 项目更关注“低空运行数字底座”的表达，而不是单一算法性能。它尝试把复杂现场信息变成可解释、可追踪、可联动的事件信号。
-
----
 
 ## ❓ FAQ
 
@@ -325,8 +313,6 @@ IASR 的核心流程可以概括为：
 
 不建议。所有预警都是辅助提示，应由人工确认后再用于真实运行或处置。
 
----
-
 ## 🛣️ Roadmap
 
 - [ ] 支持更多农业病害类别识别
@@ -336,8 +322,6 @@ IASR 的核心流程可以概括为：
 - [ ] 对接真实平台 API，实现派单、确认、关闭的闭环流程
 - [ ] 增加一键运行报告导出功能
 
----
-
 ## 🌐 English Summary
 
 IASR (Integrated Air Situation Recognition System) is an MVP system for low-altitude situation awareness. It processes videos and agricultural images, extracts traffic and visibility indicators, generates standardized events, and simulates alert routing for different response targets.
@@ -346,19 +330,13 @@ Current features include YOLO-based video detection/tracking, traffic metrics, c
 
 This project is an educational and research-oriented prototype. All alerts are advisory and should be manually verified before real-world use.
 
----
-
 ## ⚠️ Disclaimer
 
 本项目为课程实践、科研展示与原型验证用途。系统输出的事件和预警不构成专业安全、交通、农业或气象判断，实际使用前必须进行人工复核和专业验证。
 
----
-
 ## 📜 License
 
 This project is licensed under the MIT License.
-
----
 
 ## 🙏 Acknowledgements
 
@@ -367,8 +345,6 @@ This project is licensed under the MIT License.
 - [OpenCV](https://opencv.org/)
 - FFmpeg / imageio-ffmpeg
 - Tongji University
-
----
 
 ## Author
 
