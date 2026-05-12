@@ -342,7 +342,8 @@ This project is licensed under the MIT License.
 - [Streamlit](https://streamlit.io/)
 - [OpenCV](https://opencv.org/)
 - FFmpeg / imageio-ffmpeg
-- Tongji University
+- Tongji University iS3 Lab
+- Tongji University XAI Lab
 
 ## Author
 
