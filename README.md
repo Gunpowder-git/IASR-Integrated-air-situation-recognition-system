@@ -84,7 +84,7 @@ python -m pip install -r requirements.txt
 
 ---
 
-### 2）模型权重（重要）
+### 2）模型权重
 本项目默认使用 Ultralytics YOLO 权重（例如 `yolov8n.pt`）。
 
 #### 推荐方案：本地放置权重
@@ -182,6 +182,7 @@ python -m streamlit run app.py
 - Ultralytics YOLO
 - Streamlit
 - OpenCV / FFmpeg
-- iS3 Lab
+- iS3 Lab, Tongji University
+- XAI Lab, Tongji University
 
 Author : He Jiale @Tongji University
